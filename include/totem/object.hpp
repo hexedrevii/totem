@@ -5,6 +5,7 @@
 #include <string_view>
 #include <unordered_map>
 #include <vector>
+#include <string>
 namespace ecf {
   class Object {
   public:
@@ -39,6 +40,7 @@ namespace ecf {
     }
 
     const ecf::Object* getParent() const { return this->mParent; }
+    const ecf::Object* getRoot() const;
 
     const std::string getName() const { return mName; }
     void setName(std::string_view name) { this->mName = name; };

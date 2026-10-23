@@ -77,3 +77,12 @@ ecf::Object* ecf::Object::getChild(std::string_view name) {
 
   return nullptr;
 }
+
+const ecf::Object* ecf::Object::getRoot() const {
+    const ecf::Object* current = this;
+    while (current->getParent() != nullptr) {
+        current = const_cast<ecf::Object*>(current->getParent());
+    }
+
+    return current;
+}

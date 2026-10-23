@@ -8,6 +8,7 @@ project(totem LANGUAGES CXX DESCRIPTION "Small ECF Library.")
 
 add_library(${PROJECT_NAME} STATIC
   src/object.cpp
+  include/totem/signal.hpp
   include/totem/object.hpp
   include/totem/component.hpp
 
