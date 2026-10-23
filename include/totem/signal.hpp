@@ -14,8 +14,6 @@ namespace ecf {
 
 		void connect(std::string_view name, Subscriber sub) {
 			this->mSubscribers->emplace(name, std::move(sub));
-
-			return id;
 		}
 
 		void disconnect(std::string_view name) {
